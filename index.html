@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Yatzy</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="points">
+            <div class="type">
+                <p>1s</p>
+                <p>2s</p>
+                <p>3s</p>
+                <p>4s</p>
+                <p>5s</p>
+                <p>6s</p>
+                <p>Subtotal 1</p>
+                <p>Bonus</p>
+                <p>1 couple</p>
+                <p>2 couples</p>
+                <p>Three equal</p>
+                <p>Four equal</p>
+                <p>Small straight</p>
+                <p>Large straight</p>
+                <p>Full house</p>
+                <p>Chance</p>
+                <p>Yatzy</p>
+                <p>Subtotal 2</p>
+                <p>Total</p>
+            </div>
+            <div class="players">
+                <p id="player1"></p>
+                <p id="player2"></p>
+                <p id="player3"></p>
+                <p id="player4"></p>
+                <p id="player5"></p>
+            </div>
+            
+        </div>
+        <div class="dices"><canvas id="dicesCanvas"></canvas></div>
+        <div class="buttons">
+            <button id="dice1" class="btn-nr" onclick="saveDice(1)">1</button>
+            <button id="dice2" class="btn-nr" onclick="saveDice(2)">2</button>
+            <button id="dice3" class="btn-nr" onclick="saveDice(3)">3</button>
+            <button id="dice4" class="btn-nr" onclick="saveDice(4)">4</button>
+            <button id="dice5" class="btn-nr" onclick="saveDice(5)">5</button>
+            <button id="throw-dices" onclick="throwDices()">Throw dices</button>
+            <button id="reset" onclick="resetThrows()">Reset</button>
+        </div>
+        <div class="what-action">
+            <button>1s</button>
+            <button>2s</button>
+            <button>3s</button>
+            <button>4s</button>
+            <button>5s</button>
+            <button>6s</button>
+            <button>Subtotal 1</button>
+            <button>Bonus</button>
+            <button>1 couple</button>
+            <button>2 couples</button>
+            <button>Three equal</button>
+            <button>Four equal</button>
+            <button>Small straight</button>
+            <button>Large straight</button>
+            <button>Full house</button>
+            <button>Chance</button>
+            <button>Yatzy</button>
+            <button>Subtotal 2</button>
+            <button>Total</button>
+        </div>
+        <script src="main.js"></script>
+    </body>
+</html>
