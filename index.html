@@ -28,13 +28,13 @@
                 <p>Total</p>
             </div>
             <div class="players">
-                <p id="player1"></p>
-                <p id="player2"></p>
-                <p id="player3"></p>
-                <p id="player4"></p>
-                <p id="player5"></p>
+                <p id="player1">p1</p>
+                <p id="player2">p2</p>
+                <p id="player3">p3</p>
+                <p id="player4">p4</p>
+                <p id="player5">p5</p>
             </div>
-            
+            <div id="tab"><script src="generateTable.js"></script></div>
         </div>
         <div class="dices"><canvas id="dicesCanvas"></canvas></div>
         <div class="buttons">
@@ -45,15 +45,19 @@
             <button id="dice5" class="btn-nr" onclick="saveDice(5)">5</button>
             <button id="throw-dices" onclick="throwDices()">Throw dices</button>
             <button id="reset" onclick="resetThrows()">Reset</button>
+            <div class="num-players">
+                <p>Players:</p>
+                <input type="text" id="number-of-players">
+            </div>
         </div>
         <div class="what-action">
-            <button>1s</button>
-            <button>2s</button>
-            <button>3s</button>
-            <button>4s</button>
-            <button>5s</button>
-            <button>6s</button>
-            <button>Subtotal 1</button>
+            <button onclick="calculatePoints('1s')">1s</button>
+            <button onclick="calculatePoints('2s')">2s</button>
+            <button onclick="calculatePoints('3s')">3s</button>
+            <button onclick="calculatePoints('4s')">4s</button>
+            <button onclick="calculatePoints('5s')">5s</button>
+            <button onclick="calculatePoints('6s')">6s</button>
+            <button onclick="calculatePoints('2s')">Subtotal 1</button>
             <button>Bonus</button>
             <button>1 couple</button>
             <button>2 couples</button>
@@ -67,6 +71,9 @@
             <button>Subtotal 2</button>
             <button>Total</button>
         </div>
+        
+        <script src="dicesHandle.js"></script>
+        <script src="pointsCalc.js"></script>
         <script src="main.js"></script>
     </body>
 </html>
