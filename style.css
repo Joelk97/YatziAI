@@ -12,7 +12,7 @@ body {
 .points {
     display: grid;
     grid-template-columns: 10px 100px auto;
-    grid-template-rows: 10px 100px auto;
+    grid-template-rows: 10px 75px auto;
     margin: 0;
     padding: 5px;
     background: whitesmoke;
@@ -37,18 +37,35 @@ body {
     justify-self: center;
 }
 .players {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(5, auto);
     grid-column: 3/4;
     grid-row: 2/3;
     border: solid black 1px;
 }
+
+#tab {
+    width: 100%;
+    height: 100%;
+    grid-column: 3/4;
+    grid-row: 3/4;
+}
+
+
+.players p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .what-action {
     display: grid;
-    grid-column: 4/5;
-    grid-row: 2/3;
+    grid-column: 3/4;
+    grid-row: 3/4;
 }
 .buttons {
     display: grid;
-    grid-template-columns: repeat(5, auto);
+    grid-template-columns: repeat(5, minmax(auto,20%));
     grid-template-rows: repeat(5, auto);
     margin: 0;
     padding: 5px;
@@ -56,6 +73,17 @@ body {
     grid-column: 3/4;
     grid-row: 2/3;
 }
+.num-players {
+    display: flex;
+    grid-row: 4/5;
+    grid-column: 2/3;
+}
+
+.num-players input {
+    width: 40px;
+    height: 30px;
+}
+
 .dices {
     margin: 0;
     padding: 5px;
