@@ -20,6 +20,8 @@ let numThrows = 0;
 
 const players = document.getElementById('number-of-players');
 players.value = 2;
+const run = false;
+let actualPlayer = 0;
 
 newDices(savedNumbers);
 resetThrows();
@@ -32,8 +34,21 @@ function calculatePoints(combination){
             saveDice(i);
         }
     }
-    let points = pointsCalculator.calculate(combination, savedNumbers);
+    let points = pointsCalculator.calculate(combination, savedNumbers)[0];
+    if(!points){
+        return false;
+    }
+    let comb = pointsCalculator.calculate(combination, savedNumbers)[1];
     var cells = document.getElementById("pointsTable").getElementsByTagName("td");
-
+    if(cells[actualPlayer+comb].innerText==='no'){
+        cells[actualPlayer+comb].innerText = points;
+    }else{
+        console.log('false');
+        return false};
+    if(actualPlayer==players.value-1){
+        actualPlayer=0;
+    }else{
+        actualPlayer++;
+    }
+    resetThrows();
 }
-

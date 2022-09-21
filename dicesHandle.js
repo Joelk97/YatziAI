@@ -7,7 +7,6 @@ function saveDice(nr){
         dices[nr-1].style.backgroundColor = 'beige'
         savedNumbers[nr-1]=0;
     }
-    console.log(savedNumbers);
     return savedNumbers;   
 }
 
