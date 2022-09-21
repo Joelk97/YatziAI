@@ -26,6 +26,11 @@ let actualPlayer = 0;
 newDices(savedNumbers);
 resetThrows();
 
+
+
+
+
+
 const pointsCalculator = new PointsCalculator(dices);
 
 function calculatePoints(combination){
